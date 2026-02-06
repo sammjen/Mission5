@@ -1,0 +1,42 @@
+﻿@{
+    ViewData["Title"] = "My Services";
+}
+<h1>@ViewData["Title"]</h1>
+
+<h3>
+    Here you can learn about my rates for my services 
+</h3>
+
+<p>
+    Although I'm not a professional, I feel like I have a good amount of experience on what is beneficial, and what is
+    just slop put out there by "experts" on social media. I know what it's like to be the skinny kid. In high school I
+    weighed 165 pounds. Since then, I've gained over 20 pounds of muscle, and can help you do the same.
+</p>
+
+<label class="form-label">Hourly Rate:</label>
+<div class="input-group mb-3">
+    <span class="input-group-text">$</span>
+    <input type="text" class="form-control" value="20.00" readonly>
+</div>
+
+<form id="formCalc">
+    
+    <label for="hoursInput">Enter how many hours do you want to work out together:</label>
+    <br/>
+    <input type="number" id="hoursInput" name="hours" min="0" step="0.5">
+    <br/>
+    <br/>
+    <button type="button" id="calculate" class="btn btn-primary">Calculate Cost</button>
+</form>
+
+<div style="margin-top: 10px; font-weight: bold;">
+    Total Cost: $<span id="totalCost">0.00</span>
+</div>
+
+<p class="error" id="errorMsg" style="color: red; display: none;">
+    Please enter a valid number of hours.
+</p>
+
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<script src="~/js/calculator.js"></script>
