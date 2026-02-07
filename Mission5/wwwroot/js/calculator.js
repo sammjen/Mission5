@@ -1,14 +1,12 @@
 $(document).ready(function() {
-
+    //my chosen hourly rate is 20 an hour
     const HOURLY_RATE = 20.00;
-
     // Select elements
     const $input = $('#hoursInput');
     const $output = $('#totalCost');
     const $error = $('#errorMsg');
     const $button = $('#calculate'); // Select the new button
-
-    // CHANGED: Listen for 'click' on the button instead of 'input' on the text box
+    
     $button.on('click', function() {
 
         // Get the value
